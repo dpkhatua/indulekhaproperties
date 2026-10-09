@@ -146,3 +146,14 @@ table.filings th{text-align:left;font-family:var(--font-mono);font-size:12px;let
 table.filings td{padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
 table.filings tr:last-child td{border-bottom:0}
 table.filings td:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.map-cta{position:absolute;left:16px;bottom:16px;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:15px;padding:10px 16px;border-radius:6px}
+
+.map-embed{margin-top:40px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.map-embed iframe{display:block;width:100%;height:clamp(280px,42vw,420px);border:0}
+
+.brand{min-width:0}
+.brand .name{display:flex;flex-direction:column;gap:3px;line-height:1.1;min-width:0}
+.brand .name strong{font-weight:400;font-size:21px}
+.brand .name small{font-family:var(--font-body);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:480px){.brand .name strong{font-size:15px}.brand .name small{font-size:9.5px;letter-spacing:.06em}}
