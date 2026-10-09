@@ -9,7 +9,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=4">
+<style>
+/* Two-line company name in the header */
+header.bar .brand{min-width:0}
+header.bar .brand .name{display:flex;flex-direction:column;gap:3px;line-height:1.1;min-width:0}
+header.bar .brand .name strong{display:block;font-weight:400;font-size:21px}
+header.bar .brand .name small{display:block;font-family:var(--font-body);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:480px){header.bar .brand .name strong{font-size:15px}header.bar .brand .name small{font-size:9.5px;letter-spacing:.06em}}
+/* Mobile menu: keep every link visible as a swipeable row under the company name */
+section[id]{scroll-margin-top:84px}
+@media (max-width:720px){
+  section[id]{scroll-margin-top:130px}
+  header.bar .wrap{flex-wrap:wrap;gap:10px 16px;padding-block:10px}
+  header.bar nav{width:100%;display:flex;overflow-x:auto;gap:8px;padding-block:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent)}
+  header.bar nav::-webkit-scrollbar{display:none}
+  header.bar nav a{display:block !important;flex:none;white-space:nowrap;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:14px}
+  header.bar nav a.cta{border-color:var(--accent)}
+  header.bar nav a:last-child{margin-right:28px}
+}
+</style>
 </head>
 <body>
 <header class="bar">
@@ -81,6 +101,7 @@
         <h3>Enquiries</h3>
         <p>Looking to buy, sell, or lease a property in Bhubaneswar? Visit our office or call us directly at 9438207620. We are happy to assist you!.</p>
       </article>
+    </div>
   </section>
 
   <section id="company">
@@ -137,6 +158,7 @@
           <tr><td>Photograph of Registered Office showing external&hellip;</td><td>Other eForm Documents</td><td>28 Feb 2023</td></tr>
         </tbody>
       </table>
+    </div>
   </section>
 
   <section id="visit">
@@ -171,6 +193,6 @@
     <span class="mono">CIN U70109OR2022PTC040483 &middot; Registered with ROC Cuttack</span>
   </div>
 </footer>
-<script src="script.js"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>
